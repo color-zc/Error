@@ -1,0 +1,26 @@
+"""
+TypeError: 'numpy.ndarray' object is not callable
+"""
+"""
+reason: Confusing variable names or Confusion in variable names (the name of variable is confused)
+
+code:
+def data(k): 
+    database = pd.read_excel('E:\\ZC\\drug\\ChemDes\\neopl+analg.xlsx',sheet_name=k)
+    data0 = database.values
+    return data0
+
+data = data(3)    
+y = [0]*229+[1]*209
+print('the size of original dataset:',data.shape) 
+"""
+
+########### Codes running smoothly is as follows(The code that runs smoothly is as follows)
+def du(k): 
+    database = pd.read_excel('E:\\ZC\\drug\\ChemDes\\neopl+analg.xlsx',sheet_name=k)
+    data0 = database.values
+    return data0
+
+data = du(3)    
+y = [0]*229+[1]*209
+print('the size of original dataset:',data.shape) 
