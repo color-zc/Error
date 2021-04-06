@@ -1,0 +1,17 @@
+############ 原代码 ############
+import numpy as np
+a = np.zeros((3,5))
+i = 5/5-1
+b = [0,4,6]
+a[i,:len(a)] = b
+############ 原代码 ############
+
+错误输出
+a[i,:len(a)] = b
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+
+原因
+保存于矩阵 a 时， 索引 i 存在问题，其是一个浮点数
+
+解决方法
+i= int(5/5-1)
