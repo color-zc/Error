@@ -1,0 +1,13 @@
+'''
+DataFrame 处理注意
+其会由数字、表头、行名称或序号组成
+在对其进行删除列的操作时，请注意不要在初始的表头序号不连续的DataFrame上进行删除，
+这样会使得其不存在某列时吗，其会产生空值NaN，使得后面的程序无法运行
+'''
+
+
+X = X0.values                  # X0，是DataFrame，其的表头序号不是连续的
+b = list(range(0,m,1))
+X = DataFrame(X,columns=b)     # 给X数据添加连续的表头序号
+X = X.drop(num,axis=1)         # 这样，对其列进行删除时，才不会产生NaN的空列
+ 
